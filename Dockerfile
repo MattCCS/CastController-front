@@ -2,8 +2,9 @@ FROM node:12.18.1
 
 WORKDIR /app
 
-ADD . /app
+COPY package.json /app
+RUN npm install
 
-ENV REACT_APP_PROXY "http://localhost:11001"
+ADD . /app
 
 CMD ["npm", "start"]
