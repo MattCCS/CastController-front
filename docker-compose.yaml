@@ -1,0 +1,8 @@
+services:
+  react:
+    image: mattccs-castcontroller-front
+    container_name: front
+    build: .
+    ports:
+      - "11000:11000"
+    stdin_open: true
